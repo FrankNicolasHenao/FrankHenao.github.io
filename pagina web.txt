@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio - Preparador Físico</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Roboto', sans-serif; background: #f9f9f9; color: #333; }
+    header, section { padding: 60px 20px; text-align: center; }
+    nav { background: #111; padding: 20px; position: fixed; top: 0; width: 100%; z-index: 1000; }
+    nav ul { display: flex; justify-content: center; list-style: none; }
+    nav ul li { margin: 0 15px; }
+    nav ul li a { color: white; text-decoration: none; font-weight: 700; }
+    nav ul li a:hover { color: #f04e30; }
+    .hero { background: url('https://html.designingmedia.com/xtreme-fitness/images/banner-img.png') no-repeat center center/cover; color: white; height: 100vh; display: flex; align-items: center; justify-content: center; flex-direction: column; }
+    .hero h1 { font-size: 48px; }
+    .hero p { font-size: 20px; margin-top: 10px; }
+    .section-title { font-size: 36px; margin-bottom: 40px; color: #f04e30; }
+    .about img { width: 200px; border-radius: 50%; margin-bottom: 20px; }
+    .projects, .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto; }
+    .project-card, .skill-item { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    .project-card img { width: 100%; border-radius: 10px; }
+    footer { background: #111; color: white; padding: 40px 20px; }
+    .contact a { color: #f04e30; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#acerca">Acerca de Mí</a></li>
+      <li><a href="#proyectos">Mis Proyectos</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero" id="inicio">
+    <h1>Preparador Físico Profesional</h1>
+    <p>Transformando cuerpos, mente y vidas</p>
+  </section>
+
+  <section id="acerca" class="about">
+    <h2 class="section-title">Acerca de Mí</h2>
+    <img src="https://via.placeholder.com/200" alt="Foto personal">
+    <p>Soy un preparador físico con experiencia en programas de entrenamiento, rehabilitación y rendimiento, enfocado en el bienestar integral de mis pacientes.</p>
+  </section>
+
+  <section id="proyectos">
+    <h2 class="section-title">Mis Proyectos</h2>
+    <div class="projects">
+      <div class="project-card">
+        <img src="https://via.placeholder.com/300x200" alt="Proyecto 1">
+        <h3>Rehabilitación Integral</h3>
+        <p>Programa dirigido a personas en situación de calle con enfoque terapéutico.</p>
+      </div>
+      <div class="project-card">
+        <img src="https://via.placeholder.com/300x200" alt="Proyecto 2">
+        <h3>Entrenamiento Funcional</h3>
+        <p>Plan personalizado para mejorar la movilidad y fuerza general.</p>
+      </div>
+      <div class="project-card">
+        <img src="https://via.placeholder.com/300x200" alt="Proyecto 3">
+        <h3>Hidroterapia Activa</h3>
+        <p>Uso del medio acuático para acelerar procesos de recuperación muscular.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="habilidades">
+    <h2 class="section-title">Habilidades</h2>
+    <div class="skills">
+      <div class="skill-item">Planificación del entrenamiento</div>
+      <div class="skill-item">Rehabilitación física</div>
+      <div class="skill-item">Hidroterapia</div>
+      <div class="skill-item">Psicología deportiva</div>
+      <div class="skill-item">Nutrición aplicada al deporte</div>
+      <div class="skill-item">Trabajo en equipo interdisciplinario</div>
+    </div>
+  </section>
+
+  <footer id="contacto">
+    <h2 class="section-title">Contacto</h2>
+    <p>Email: <a href="mailto:miemail@ejemplo.com">miemail@ejemplo.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/miusuario" target="_blank">/miusuario</a></p>
+  </footer>
+
+  <script>
+    // Scroll suave
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
